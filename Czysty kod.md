@@ -2,7 +2,7 @@
 
 #### Zmienne
 - W nazwach kolekcji wyrażać intencje
-  ```
+  ```java
   // źle
   int d; // Czas trwania w dniach
 
@@ -14,7 +14,7 @@
   ```
 
 - Nie dodawać do nazwy obiektu kolekcji typu kolekcji
-  ```
+  ```java
   // źle
   List<String> namesList = new ArrayList<>();
   Set<String> citiesSet = new Set<>();
@@ -34,7 +34,7 @@
 - Nazwy metod powinny być **czasownikami** lub **wyrażeniami czasownikowymi**
 
 - Przy przeciążonych konstruktorach należy używać metod fabryk o nazwach  opisujących argumenty:
-  ```
+  ```java
   // słabo
   Complex fulcrumPoint = new Complex(23.0);
 
@@ -50,7 +50,7 @@
 - Metoda powinna wykonywać jedną czynność (tylko jeden poziom abstrakcji)
 
 - Unikać efektów ubocznych w wykonywanej metodzie, np.
-  ```
+  ```java
   public boolean checkPassword(String userName, String password) {
     User user = UserGateway.findByName(userName);
     if (user != User.NULL) {
@@ -69,7 +69,7 @@
 - Jak najmniej argumentów wejściowych w metodach; powyżej 3-4 zastanawiać się, czy nie zmienić ich na argumenty obiektowe
 
 - W metodach zwracających *void* starać się nie modyfikować argumentu wejściowego, ale najlepiej jakieś pole w klasie
-  ```
+  ```java
   // zamiast
   public void addError(String fieldName, String errorMessage, Set<Error> validationErrors) {
     validatioErrors.put(fieldName, message);
@@ -86,7 +86,7 @@
   ```
 
 - Jeśli metoda modyfikuje jakiś argument wejściowy, to powinna go zwrócić w argumencie wyjściowym [str. 63]
-  ```
+  ```java
   public List<Names> addName(String name, List<String> names) {
     names.add(name);
     return names;
@@ -102,7 +102,7 @@
 - Nazwy klas powinny być **rzeczownikami** lub **wyrażeniami rzeczownikowymi**
 
 - Nazwa interfejsu i tylko jednej klasy implementującej:
-  ```
+  ```java
   public interface ShapeFactory {
   }
   
@@ -135,7 +135,7 @@
 - Koncepcje związane ze sobą powinny znajdować się możliwie jak najblizej siebie, np. zmienna powinna być zadeklarowana jak najblizej miejsca użycia
 - Zmienne instancyjne powinny być deklarowane na początku klasy
 - Funkcje zależne powinny być zadeklarowane jak najbliżej siebie, np. funkcja wywoływana powinna być zadeklarowana zaraz po funkcji wywołującej:  
-  ```
+  ```java
   public class Person() {
 
     public void methodA() {
