@@ -18,7 +18,7 @@ public class Runner {
         attendants.add(new Attendant(42, "Błażej"));
         attendants.add(new Attendant(12, "Ewa"));
 
-        // Sorting with Collections.sort();
+        // Sorting with Runner.sort();
         Collections.sort(attendants);
         logAttendants(attendants);
         Collections.reverse(attendants);
@@ -34,7 +34,7 @@ public class Runner {
         attendantComparator = (o1, o2) -> o1.compareTo(o2);
         attendantComparator = Comparator.naturalOrder();
 
-        // Old sorting by Collections.sort()
+        // Old sorting by Runner.sort()
         Collections.sort(attendants, attendantComparator);
         // New sorting by List.sort();
         attendants.sort(attendantComparator);
