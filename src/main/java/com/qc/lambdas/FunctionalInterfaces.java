@@ -1,6 +1,5 @@
 package com.qc.lambdas;
 
-import java.util.Arrays;
 import java.util.function.BiFunction;
 
 // TODO: poćwiczyć
@@ -20,5 +19,5 @@ public class FunctionalInterfaces {
 @FunctionalInterface
 interface Printer {
 
-    public String print(int i);
+    String print(int i);
 }
